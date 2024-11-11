@@ -1,0 +1,12 @@
+
+
+<mat-toolbar color="primary" class="app-toolbar" *ngIf="authService.isAuthenticated() || isHome()">
+  <span>{{ name }}</span>
+  <span class="spacer"></span>
+  <nav>
+    <a mat-button routerLink="/login" *ngIf="!authService.isAuthenticated()">Login</a>
+    <a mat-button routerLink="/home">Home</a>
+    <a mat-button routerLink="/profile" *ngIf="authService.isAuthenticated()">Profile</a>
+  </nav>
+</mat-toolbar>
+<router-outlet></router-outlet>

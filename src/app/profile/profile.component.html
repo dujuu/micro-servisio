@@ -1,0 +1,40 @@
+<mat-toolbar color="primary">
+    <span>Bienvenido, {{ authService.getUsername() }}!</span>
+
+    <span class="spacer"></span>
+    <button mat-mini-fab  [matMenuTriggerFor]="menu">
+        <mat-icon>menu</mat-icon>
+    </button>
+
+  
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item [routerLink]="'/users'">
+        <mat-icon>group</mat-icon>
+        <span>Usuarios</span>
+      </button>
+      <button mat-menu-item [routerLink]="'/todos'">
+        <mat-icon>check_box</mat-icon>
+        <span>Tareas Pendientes</span>
+      </button>
+      <button mat-menu-item [routerLink]="'/posts'">
+        <mat-icon>description</mat-icon>
+        <span>Publicaciones</span>
+      </button>
+      <button mat-menu-item [routerLink]="'/albums'">
+        <mat-icon>photo_album</mat-icon>
+        <span>Álbumes</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-menu-item (click)="logout()">
+        <mat-icon>logout</mat-icon>
+        <span>Cerrar Sesión</span>
+      </button>
+    </mat-menu>
+  </mat-toolbar>
+  
+<div>
+    <p>contenido para rellenar</p>
+    <p>contenido para rellenar</p>
+    <p>contenido para rellenar</p>
+</div>
+  
